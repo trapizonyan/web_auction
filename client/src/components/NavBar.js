@@ -18,16 +18,18 @@ const NavBar = observer(() => {
     }
 
     return (
-        <Navbar bg="dark" variant="dark">
+        <Navbar style={{background: '#4D4C49', borderRadius: '0px 0px 60px 60px'}} variant="dark">
             <Container>
-                <NavLink style={{color:'white'}} to={SHOP_ROUTE}>Аукцион антиквариата и пямятных вещей</NavLink>
+                <NavLink style={{color:'white', fontSize: '28px'}} to={SHOP_ROUTE}>Аукцион антиквариата и пямятных вещей</NavLink>
+
                 {user.isAuth ?
                     <Nav className="ml-auto" style={{color: 'white'}}>
+
                         <Button
                             variant={"outline-light"}
                             onClick={() => history.push(ADMIN_ROUTE)}
                         >
-                            Админ панель
+                            Разместить лот
                         </Button>
                         <Button
                             variant={"outline-light"}

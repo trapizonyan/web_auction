@@ -39,16 +39,16 @@ const Auth = observer(() => {
             className="d-flex justify-content-center align-items-center"
             style={{height: window.innerHeight - 54}}
         >
-            <Card style={{width: 600}} className="p-5">
+            <Card style={{width: 600, border: '2px #4D4C49 solid'}} className="p-5">
                 <h2 className="m-auto">{isLogin ? 'Авторизация' : "Регистрация"}</h2>
                 <Form className="d-flex flex-column">
-                    <Form.Control
+                    <Form.Control style={{border: '2px #4D4C49 solid'}}
                         className="mt-3"
                         placeholder="Введите ваш email..."
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                     />
-                    <Form.Control
+                    <Form.Control style={{border: '2px #4D4C49 solid'}}
                         className="mt-3"
                         placeholder="Введите ваш пароль..."
                         value={password}
@@ -58,11 +58,11 @@ const Auth = observer(() => {
                     <Row className="d-flex justify-content-between mt-3 pl-3 pr-3">
                         {isLogin ?
                             <div>
-                                Нет аккаунта? <NavLink to={REGISTRATION_ROUTE}>Зарегистрируйся!</NavLink>
+                                <NavLink to={REGISTRATION_ROUTE}>Зарегистрирваться</NavLink>
                             </div>
                             :
                             <div>
-                                Есть аккаунт? <NavLink to={LOGIN_ROUTE}>Войдите!</NavLink>
+                                <NavLink to={LOGIN_ROUTE}>Войти</NavLink>
                             </div>
                         }
                         <Button

@@ -2,14 +2,30 @@ import {makeAutoObservable} from "mobx";
 
 export default class DeviceStore {
     constructor() {
-        this._types = []
-        this._brands = []
+        this._types = [
+            {id: 1, name: 'Картины'},
+            {id: 2, name: 'Иконы'},
+            {id: 3, name: 'Мебель'},
+            {id: 4, name: 'Изделия ювелиров'},
+            {id: 5, name: 'Вазы'},
+            {id: 6, name: 'Фарфор'},
+            {id: 7, name: 'Керамика'},
+            {id: 8, name: 'Серебро'},
+            {id: 9, name: 'Шкатулки'}
+        ]
+        this._brands = [
+            {id: 1, name: '20 век'},
+            {id: 2, name: '19 век'},
+            {id: 3, name: '18 век'},
+            {id: 4, name: '17 век'},
+            {id: 5, name: '16 век'},
+        ]
         this._devices = []
         this._selectedType = {}
         this._selectedBrand = {}
         this._page = 1
         this._totalCount = 0
-        this._limit = 3
+        this._limit = 10
         makeAutoObservable(this)
     }
 
