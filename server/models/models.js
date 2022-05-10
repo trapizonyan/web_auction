@@ -49,7 +49,33 @@ const TypeBrand = sequelize.define('type_brand', {
     id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
 })
 
+const TypeInto = Type.bulkCreate(
+    [
+        { id: "1", name: 'Картины' },
+        { id: "2", name: 'Иконы' },
+        { id: "3", name: 'Мебель' },
+        { id: "4", name: 'Изделия ювелиров' },
+        { id: "5", name: 'Вазы' },
+        { id: "6", name: 'Фарфор' },
+        { id: "7", name: 'Керамика' },
+        { id: "8", name: 'Серебро' },
+        { id: "9", name: 'Шкатулки' },
+    ],
+    {
+    ignoreDuplicates: true,
+})
 
+const BrandInto = Brand.bulkCreate(
+    [
+        {id: 1, name: '20 век'},
+        {id: 2, name: '19 век'},
+        {id: 3, name: '18 век'},
+        {id: 4, name: '17 век'},
+        {id: 5, name: '16 век'},
+    ],
+    {
+        ignoreDuplicates: true,
+    })
 User.hasOne(Basket)
 Basket.belongsTo(User)
 
@@ -86,7 +112,9 @@ module.exports = {
     Brand,
     Rating,
     TypeBrand,
-    DeviceInfo
+    DeviceInfo,
+    TypeInto,
+    BrandInto
 }
 
 
