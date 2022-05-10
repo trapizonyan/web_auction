@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "client": "cd client && npm start",
+    "backend": "cd server && node index.js",
+    "dev": "concurrently \"npm run backend\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  }
+
+}
