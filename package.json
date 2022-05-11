@@ -1,11 +1,12 @@
 {
   "scripts": {
     "client": "cd client && npm start",
-    "backend": "cd server && node index.js",
+    "backend": "cd server && npm run server",
     "start": "npm run backend",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
+    "dotenv": "^8.6.0",
     "concurrently": "^7.1.0"
   }
 }
