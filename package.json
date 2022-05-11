@@ -2,7 +2,7 @@
   "scripts": {
     "client": "cd client && npm start",
     "backend": "cd server && node index.js",
-    "start": "concurrently \"npm run backend\" \"npm run client\"",
+    "start": "npm run backend",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
