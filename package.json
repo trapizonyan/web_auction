@@ -6,7 +6,6 @@
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
-    "dotenv": "^8.6.0",
     "concurrently": "^7.1.0"
   }
 }
