@@ -4,6 +4,8 @@
     "backend": "cd server && node index.js",
     "start": "concurrently \"npm run backend\" \"npm run client\"",
     "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "dependencies": {
+    "concurrently": "^7.1.0"
   }
-
 }
